@@ -3,914 +3,223 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trio Profit City - Quotex Premium Signals</title>
+    <title>EAGLE HYPER AI - Premium Signals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Cinzel:wght@700&family=Source+Code+Pro:wght@600&display=swap"
       rel="stylesheet"
     />
     <style>
-      /* General Styles */
+      /* --- EAGLE HYPER AI THEME --- */
       :root {
-        --primary: #8a2be2;
-        --secondary: #9400d3;
-        --accent: #c201ff;
+        --primary-gold: #c5a557;
         --success: #00c853;
-        --danger: #ff3d00;
-        --dark: #1a0033;
-        --darker: #0d001a;
-        --light: #f8f9fa;
+        --danger: #ff5252; /* Adjusted for better contrast */
+        --dark-bg: #121212;
+        --dark-card: #1c1c1c;
+        --light-text: #f0f0f0;
+        --light-translucent: rgba(240, 240, 240, 0.6);
       }
-      
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
       body {
         font-family: "Roboto", sans-serif;
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, var(--darker), var(--dark));
-        color: var(--light);
+        background-color: var(--dark-bg);
+        color: var(--light-text);
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-content {
+        flex: 1;
+      }
+
+      /* Typography */
+      h1,
+      h2 {
+        font-family: "Cinzel", serif;
+        text-align: center;
+        color: var(--light-text);
+        font-weight: 700;
+        text-shadow: 0 0 15px rgba(197, 165, 87, 0.3);
       }
 
       h1 {
-        text-align: center;
-        color: var(--light);
-        font-size: 2.4rem;
-        margin-top: 40px;
-        font-weight: 700;
-        text-shadow: 0 0 15px rgba(194, 1, 255, 0.7);
+        font-size: 2.5rem;
+        margin: 15px 0 20px 0;
+        letter-spacing: 2px;
       }
 
-      .container {
-        width: 90%;
-        max-width: 1200px;
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+      }
+      
+      /* New style for login subtitle */
+      .login-subtitle {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1.1rem;
+        color: var(--light-translucent);
+        text-shadow: none;
+        margin-top: -15px; /* Pull it closer to H1 */
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+      }
+
+
+      /* --- ASCII ART EAGLE LOGO --- */
+      .ascii-art-logo {
+        text-align: center;
+        color: var(--primary-gold);
+        font-family: 'Source Code Pro', monospace;
+        font-size: 7.5px;
+        margin: 0 auto 10px auto;
+        line-height: 0.85;
+        user-select: none;
+        letter-spacing: 0.5px;
+        white-space: pre;
+      }
+
+
+      /* Base Container Styles */
+      .container,
+      .login-container {
+        width: 95%;
+        max-width: 550px;
         margin: 40px auto;
         padding: 30px;
-        background: rgba(26, 0, 51, 0.85);        .login-container input {
-          width: 80%;
-          max-width: 320px;
-          min-width: 120px;          .login-container input {
-            width: 80%;
-            max-width: 160px;
-            min-width: 80px;
-            padding: 7px 10px;            /* Make Login Dashboard Smaller */
-            .login-container {
-              width: 95%;
-              max-width: 270px;
-              margin: 60px auto;
-              padding: 18px 14px 22px 14px;              /* Make Login Dashboard Smaller */
-              .login-container {
-                width: 95%;
-                max-width: 270px;
-                margin: 60px auto;
-                padding: 18px 14px 22px 14px;
-                background: rgba(26, 0, 51, 0.93);
-                box-shadow: 0 4px 18px rgba(0,0,0,0.22), 0 0 12px var(--primary);
-                border-radius: 12px;
-                text-align: center;
-                border: 1px solid var(--primary);
-              }
-              
-              .login-container h1 {
-                font-size: 1.1rem;
-                margin-bottom: 18px;
-                letter-spacing: 1px;
-              }
-              
-              .login-container input {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 7px 9px;
-                margin: 8px auto;
-                border: 1px solid var(--primary);
-                border-radius: 7px;
-                background: rgba(42, 0, 82, 0.5);
-                color: var(--light);
-                font-size: 0.95rem;
-                display: block;
-                box-sizing: border-box;
-              }
-              
-              .login-container button {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 10px 0;
-                font-size: 0.98rem;
-                margin-top: 15px;
-                border-radius: 7px;
-              }              /* Make Login Dashboard Smaller */
-              .login-container {
-                width: 95%;
-                max-width: 270px;
-                margin: 60px auto;
-                padding: 18px 14px 22px 14px;
-                background: rgba(26, 0, 51, 0.93);
-                box-shadow: 0 4px 18px rgba(0,0,0,0.22), 0 0 12px var(--primary);
-                border-radius: 12px;
-                text-align: center;
-                border: 1px solid var(--primary);
-              }
-              
-              .login-container h1 {
-                font-size: 1.1rem;
-                margin-bottom: 18px;
-                letter-spacing: 1px;
-              }
-              
-              .login-container input {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 7px 9px;
-                margin: 8px auto;
-                border: 1px solid var(--primary);
-                border-radius: 7px;
-                background: rgba(42, 0, 82, 0.5);
-                color: var(--light);
-                font-size: 0.95rem;
-                display: block;
-                box-sizing: border-box;
-              }
-              
-              .login-container button {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 10px 0;
-                font-size: 0.98rem;
-                margin-top: 15px;
-                border-radius: 7px;
-              }              /* Make Login Dashboard Smaller */
-              .login-container {
-                width: 95%;
-                max-width: 270px;
-                margin: 60px auto;
-                padding: 18px 14px 22px 14px;
-                background: rgba(26, 0, 51, 0.93);
-                box-shadow: 0 4px 18px rgba(0,0,0,0.22), 0 0 12px var(--primary);
-                border-radius: 12px;
-                text-align: center;
-                border: 1px solid var(--primary);
-              }
-              
-              .login-container h1 {
-                font-size: 1.1rem;
-                margin-bottom: 18px;
-                letter-spacing: 1px;
-              }
-              
-              .login-container input {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 7px 9px;
-                margin: 8px auto;
-                border: 1px solid var(--primary);
-                border-radius: 7px;
-                background: rgba(42, 0, 82, 0.5);
-                color: var(--light);
-                font-size: 0.95rem;
-                display: block;
-                box-sizing: border-box;
-              }
-              
-              .login-container button {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 10px 0;
-                font-size: 0.98rem;
-                margin-top: 15px;
-                border-radius: 7px;
-              }              /* Make Login Dashboard Smaller */
-              .login-container {
-                width: 95%;
-                max-width: 270px;
-                margin: 60px auto;
-                padding: 18px 14px 22px 14px;
-                background: rgba(26, 0, 51, 0.93);
-                box-shadow: 0 4px 18px rgba(0,0,0,0.22), 0 0 12px var(--primary);
-                border-radius: 12px;
-                text-align: center;
-                border: 1px solid var(--primary);
-              }
-              
-              .login-container h1 {
-                font-size: 1.1rem;
-                margin-bottom: 18px;
-                letter-spacing: 1px;
-              }
-              
-              .login-container input {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 7px 9px;
-                margin: 8px auto;
-                border: 1px solid var(--primary);
-                border-radius: 7px;
-                background: rgba(42, 0, 82, 0.5);
-                color: var(--light);
-                font-size: 0.95rem;
-                display: block;
-                box-sizing: border-box;
-              }
-              
-              .login-container button {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 10px 0;
-                font-size: 0.98rem;
-                margin-top: 15px;
-                border-radius: 7px;
-              }              /* Make Login Dashboard Smaller */
-              .login-container {
-                width: 95%;
-                max-width: 270px;
-                margin: 60px auto;
-                padding: 18px 14px 22px 14px;
-                background: rgba(26, 0, 51, 0.93);
-                box-shadow: 0 4px 18px rgba(0,0,0,0.22), 0 0 12px var(--primary);
-                border-radius: 12px;
-                text-align: center;
-                border: 1px solid var(--primary);
-              }
-              
-              .login-container h1 {
-                font-size: 1.1rem;
-                margin-bottom: 18px;
-                letter-spacing: 1px;
-              }
-              
-              .login-container input {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 7px 9px;
-                margin: 8px auto;
-                border: 1px solid var(--primary);
-                border-radius: 7px;
-                background: rgba(42, 0, 82, 0.5);
-                color: var(--light);
-                font-size: 0.95rem;
-                display: block;
-                box-sizing: border-box;
-              }
-              
-              .login-container button {
-                width: 92%;
-                max-width: 150px;
-                min-width: 70px;
-                padding: 10px 0;
-                font-size: 0.98rem;
-                margin-top: 15px;
-                border-radius: 7px;
-              }
-              background: rgba(26, 0, 51, 0.93);
-              box-shadow: 0 4px 18px rgba(0,0,0,0.22), 0 0 12px var(--primary);
-              border-radius: 12px;
-              text-align: center;
-              border: 1px solid var(--primary);
-            }
-            
-            .login-container h1 {
-              font-size: 1.1rem;
-              margin-bottom: 18px;
-              letter-spacing: 1px;
-            }
-            
-            .login-container input {
-              width: 92%;
-              max-width: 150px;
-              min-width: 70px;
-              padding: 7px 9px;
-              margin: 8px auto;
-              border: 1px solid var(--primary);
-              border-radius: 7px;
-              background: rgba(42, 0, 82, 0.5);
-              color: var(--light);
-              font-size: 0.95rem;
-              display: block;
-              box-sizing: border-box;
-            }
-            
-            .login-container button {
-              width: 92%;
-              max-width: 150px;
-              min-width: 70px;
-              padding: 10px 0;
-              font-size: 0.98rem;
-              margin-top: 15px;
-              border-radius: 7px;
-            }
-            margin: 12px auto;
-            border: 1.5px solid var(--primary);
-            border-radius: 7px;
-            background: rgba(42, 0, 82, 0.5);
-            color: var(--light);            .quotex-api-box {
-              display: flex;
-              align-items: center;
-              gap: 18px;
-              background: rgba(26, 0, 51, 0.97);
-              border: 1.5px solid var(--primary);
-              border-radius: 18px;
-              padding: 10px 26px;
-              position: fixed;
-              top: 18px;
-              left: 18px;
-              z-index: 200;
-              box-shadow: 0 4px 16px rgba(138,43,226,0.10);
-            }
-            
-            .quotex-logo {
-              width: 30px;
-              height: 30px;
-              background: white;
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-right: 0;
-              position: relative;
-            }
-            .quotex-logo::after {
-              content: '';
-              width: 22px;
-              height: 22px;
-              background: linear-gradient(135deg, var(--primary), var(--accent));
-              border-radius: 50%;
-              position: absolute;
-              top: 4px; left: 4px;
-            }
-            
-            .quotex-api-text {
-              display: flex;
-              flex-direction: column;
-              gap: 2px;
-            }
-            
-            .quotex-title {
-              color: #fff;
-              font-weight: 700;
-              font-size: 1.08rem;
-              letter-spacing: 1px;
-              margin-bottom: 2px;
-            }
-            
-            .api-status {
-              background: rgba(0, 200, 83, 0.12);
-              border: 1px solid var(--success);
-              color: var(--success);
-              border-radius: 12px;
-              padding: 2px 10px;
-              font-size: 0.95rem;
-              font-weight: 600;
-              margin-top: 2px;
-              display: inline-block;
-              box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-            }
-            .api-disconnected {
-              background: rgba(255, 61, 0, 0.13);
-              border: 1px solid var(--danger);
-              color: var(--danger);
-            }
-            font-size: 0.97rem;
-            display: block;
-            box-sizing: border-box;
-            transition: border-color 0.2s;
-          }
-          
-          .login-container input:focus {
-            border-color: var(--accent);
-            outline: none;
-          }
-          padding: 10px 14px;
-          margin: 12px auto;
-          border: 1px solid var(--primary);
-          border-radius: 8px;
-          background: rgba(42, 0, 82, 0.5);                 /* Make login box and fields smaller */
-          .login-container {
-            max-width: 300px;
-            padding: 22px 18px 28px 18px;
-          }
-          
-          .login-container h1 {
-            font-size: 1.3rem;
-            margin-bottom: 22px;
-          }
-          
-          .login-container input {
-            width: 90%;
-            max-width: 180px;
-            min-width: 80px;
-            padding: 8px 10px;
-            margin: 10px auto;
-            font-size: 0.95rem;
-          }
-          
-          .login-container button {
-            width: 90%;
-            max-width: 180px;
-            min-width: 80px;
-            padding: 10px 0;
-            font-size: 1rem;
-            margin-top: 18px;
-          }          /* Make login box and fields smaller */
-          .login-container {
-            max-width: 300px;
-            padding: 22px 18px 28px 18px;
-          }
-          
-          .login-container h1 {
-            font-size: 1.3rem;
-            margin-bottom: 22px;
-          }
-          
-          .login-container input {
-            width: 90%;
-            max-width: 180px;
-            min-width: 80px;
-            padding: 8px 10px;
-            margin: 10px auto;
-            font-size: 0.95rem;
-          }
-          
-          .login-container button {
-            width: 90%;
-            max-width: 180px;
-            min-width: 80px;
-            padding: 10px 0;
-            font-size: 1rem;
-            margin-top: 18px;
-          }          /* Make login box and fields smaller */
-          .login-container {
-            max-width: 300px;
-            padding: 22px 18px 28px 18px;
-          }
-          
-          .login-container h1 {
-            font-size: 1.3rem;
-            margin-bottom: 22px;
-          }
-          
-          .login-container input {
-            width: 90%;
-            max-width: 180px;
-            min-width: 80px;
-            padding: 8px 10px;
-            margin: 10px auto;
-            font-size: 0.95rem;
-          }
-          
-          .login-container button {
-            width: 90%;
-            max-width: 180px;
-            min-width: 80px;
-            padding: 10px 0;
-            font-size: 1rem;
-            margin-top: 18px;
-          }          /* Make login box and fields smaller */
-          .login-container {
-            max-width: 300px;
-            padding: 22px 18px 28px 18px;
-          }
-          
-          .login-container h1 {
-            font-size: 1.3rem;
-            margin-bottom: 22px;
-          }
-          
-          .login-container input {
-            width: 90%;
-            max-width: 180px;
-            min-width: 80px;
-            padding: 8px 10px;
-            margin: 10px auto;
-            font-size: 0.95rem;
-          }
-          
-          .login-container button {
-            width: 90%;
-            max-width: 180px;
-            min-width: 80px;
-            padding: 10px 0;
-            font-size: 1rem;
-            margin-top: 18px;
-          }   .login-container {
-            max-width: 340px;
-            padding: 28px;
-          }
-          
-          .login-container input {
-            width: 85%;
-            max-width: 220px;
-            min-width: 100px;
-            padding: 10px 12px;
-            margin: 10px auto;
-            font-size: 0.98rem;
-          }
-          
-          .login-container button {
-            width: 85%;
-            max-width: 220px;
-            min-width: 100px;
-            padding: 12px 0;
-            font-size: 1rem;
-            margin-top: 18px;
-          }
-          color: var(--light);
-          font-size: 1rem;
-          display: block;
-        }
-        
-        .login-container button {
-          width: 80%;
-          max-width: 320px;
-          min-width: 120px;
-          padding: 12px 0;
-          margin: 25px auto 0 auto;
-          background: linear-gradient(135deg, var(--primary), var(--secondary));
-          color: white;
-          border: none;
-          border-radius: 8px;
-          font-size: 1.05rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
-          display: block;
-        }
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-          0 0 25px rgba(138, 43, 226, 0.4);
+        background: var(--dark-card);
+        border: 1px solid rgba(197, 165, 87, 0.4);
         border-radius: 15px;
-        display: none;
-        color: var(--light);
-        border: 1px solid var(--accent);        .input-group input,
-        .input-group select,
-        .card button,
-        .copy-btn {
-          width: 260px;
-          max-width: 100%;
-          min-width: 120px;
-          box-sizing: border-box;
-          display: block;
-          margin: 0 auto 18px auto;
-        }
-        
-        #asset-select,
-        #otcMarkets {
-          width: 260px;
-          max-width: 100%;
-          min-width: 120px;
-          box-sizing: border-box;
-          display: block;
-          margin: 0 auto 18px auto;
-        }
-        
-        @media (max-width: 600px) {
-          .input-group input,
-          .input-group select,
-          .card button,
-          .copy-btn,
-          #asset-select,
-          #otcMarkets {
-            width: 98vw;
-            min-width: 80px;
-            font-size: 0.98rem;
-          }
-        }
-        backdrop-filter: blur(8px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(197, 165, 87, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
-      .card {
-        background: rgba(42, 0, 82, 0.6);
-        padding: 25px;
-        margin-top: 25px;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-        transition: all 0.3s ease;
-        color: var(--light);
-        border: 1px solid var(--primary);
-      }
-
-      .card button {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: white;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: block;
-        margin: 25px auto;
-        width: 60%;
-        padding: 14px;
-        border-radius: 8px;
-        font-size: 1.1rem;
-        box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
-        letter-spacing: 0.5px;
-      }
-
-      .card button:hover {
-        background: linear-gradient(135deg, var(--secondary), var(--primary));
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(138, 43, 226, 0.6);
-      }
-
-      footer {
-        background: rgba(26, 0, 51, 0.9);
-        color: var(--light);
+      .login-container {
+        max-width: 420px;
         text-align: center;
-        padding: 20px;
-        margin-top: 50px;
-        border-top: 1px solid var(--primary);
-        position: relative;
+      }
+
+      #main-page {
+        display: none;
+      }
+
+      /* Universal Input, Select, Button Styles */
+      .input-group, #login-form {
         width: 100%;
-        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+        max-width: 350px;
       }
-
-      footer a {
-        color: var(--accent);
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-      }
-
-      footer a:hover {
-        color: white;
-        text-shadow: 0 0 8px var(--accent);
-      }
-
-      /* Input and Select Styles */
-      .input-group {
-        margin: 18px 0;
-      }
-
-      .input-group label {
-        display: block;
-        margin-bottom: 10px;
-        font-weight: 500;
-        color: var(--light);
+      
+      #login-form input {
+        margin-bottom: 20px;
       }
 
       .input-group input,
-      .input-group select {
+      .input-group select,
+      .form-button {
         width: 100%;
-        padding: 14px;
-        border: 1px solid var(--primary);
+        padding: 15px;
         border-radius: 8px;
-        background: rgba(42, 0, 82, 0.5);
-        color: var(--light);
+        border: 1px solid var(--primary-gold);
+        background: var(--dark-bg);
+        color: var(--light-text);
         font-size: 1rem;
         transition: all 0.3s ease;
+      }
+
+      .input-group input::placeholder {
+        color: var(--light-translucent);
       }
 
       .input-group input:focus,
       .input-group select:focus {
         outline: none;
-        border-color: var(--accent);
-        box-shadow: 0 0 12px rgba(194, 1, 255, 0.5);
+        box-shadow: 0 0 12px rgba(197, 165, 87, 0.5);
+      }
+
+      .form-button {
+        background: var(--primary-gold);
+        color: var(--dark-bg);
+        font-weight: 700;
+        font-size: 1.1rem;
+        cursor: pointer;
+        margin-top: 10px;
+        box-shadow: 0 4px 15px rgba(197, 165, 87, 0.2);
+        letter-spacing: 1px;
+        border: 1px solid var(--primary-gold);
+      }
+
+      .form-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(197, 165, 87, 0.4);
+      }
+
+      /* Multiselect Box Styles */
+      #asset-select,
+      #otcMarkets {
+        height: 150px;
+        margin-bottom: 20px;
+      }
+
+      .group-label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: var(--light-text);
+        text-align: left;
       }
 
       /* Signal Output Styles */
       .signal-output {
-        margin-top: 30px;
-        padding: 25px;
-        background: rgba(42, 0, 82, 0.5);
-        border: 1px solid var(--primary);
-        border-radius: 12px;
-        color: var(--light);
-        font-size: 1rem;
-        position: relative;
-        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 450px;
+        margin-top: 20px;
       }
-
       .signal-box {
-        border: 1px solid var(--primary);
+        border: 1px solid rgba(197, 165, 87, 0.5);
         border-radius: 10px;
-        padding: 18px;
-        margin: 15px 0;
-        background: rgba(26, 0, 51, 0.7);
+        padding: 15px;
+        margin: 10px 0;
+        background: var(--dark-bg);
         transition: all 0.3s ease;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-family: "Source Code Pro", monospace;
+        font-weight: 600;
       }
 
       .signal-box:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 15        /* Universal Box Sizing */
-        *, *::before, *::after {
-          box-sizing: border-box;
-        }
-        
-        /* Unified Input, Select, Button Styles */
-        .input-group input,
-        .input-group select,
-        .card button,
-        .copy-btn {
-          width: 100%;
-          max-width: 260px;
-          min-width: 120px;
-          padding: 12px 14px;
-          border-radius: 8px;
-          border: 1px solid var(--primary);
-          background: rgba(20, 10, 40, 0.92);
-          color: #f8f9fa;
-          font-size: 1.05rem;
-          margin: 0 auto 12px auto;
-          display: block;
-          transition: all 0.2s;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.18);
-        }
-        
-        .input-group label {
-          font-size: 1.08rem;
-          font-weight: 500;
-          color: #e0e0e0;
-          margin-bottom: 7px;
-          display: block;
-          text-shadow: 0 0 6px #1a0033;
-        }
-        
-        .input-group input:focus,
-        .input-group select:focus,
-        .card button:focus,
-        .copy-btn:focus {
-          outline: none;
-          border-color: var(--accent);
-          box-shadow: 0 0 10px var(--accent);
-        }
-        
-        /* Signal Box Unified Style */
-        .signal-box {
-          border: 1px solid var(--primary);
-          border-radius: 10px;
-          padding: 12px 16px;
-          margin: 10px auto;
-          background: rgba(18, 6, 32, 0.93);
-          transition: all 0.2s;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.22);
-          font-size: 1rem;
-          max-width: 340px;
-        }
-        
-        .signal-box:hover {
-          transform: translateY(-2px) scale(1.02);
-          box-shadow: 0 6px 18px var(--accent);
-          border-color: var(--accent);
-        }
-        
-        .signal-text {
-          margin: 0;
-          font-family: 'Source Code Pro', monospace;
-          font-weight: 600;
-          letter-spacing: 0.5px;
-          color: #f8f9fa;
-        }
-        
-        /* Button Style */
-        .card button,
-        .copy-btn {
-          background: linear-gradient(135deg, #2d0a4a 60%, var(--accent) 100%);
-          color: #fff;
-          font-weight: 600;
-          border: none;
-          cursor: pointer;
-          margin-top: 18px;
-          margin-bottom: 0;
-          box-shadow: 0 2px 12px rgba(138, 43, 226, 0.18);
-          letter-spacing: 0.5px;
-        }
-        
-        .card button:hover,
-        .copy-btn:hover {
-          background: linear-gradient(135deg, var(--accent), #2d0a4a 100%);
-          box-shadow: 0 6px 18px var(--accent);
-          color: #fff;
-        }
-        
-        /* Container/Card/Background Darker */
-        body {
-          background: linear-gradient(135deg, #0d001a 0%, #1a0033 100%);
-          color: #f8f9fa;
-        }
-        
-        .container, .card, .login-container {
-          background: rgba(18, 6, 32, 0.97);
-          border: 1px solid var(--primary);
-          box-shadow: 0 4px 24px rgba(0,0,0,0.28);
-        }
-        
-        footer {
-          background: #120620;
-          color: #bdbdbd;
-          border-top: 1px solid var(--primary);
-        }
-        
-        /* Select Box Height for Asset/OTC */
-        #asset-select, #otcMarkets {
-          height: 120px;
-          max-width: 260px;
-          min-width: 120px;
-          margin: 0 auto 12px auto;
-          background: rgba(20, 10, 40, 0.92);
-          color: #f8f9fa;
-          border-radius: 8px;
-          border: 1px solid var(--primary);
-          font-size: 1.05rem;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.18);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 600px) {
-          .container, .card, .login-container {
-            width: 98%;
-            padding: 10px;
-            min-width: unset;
-          }
-          .signal-box,
-          .input-group input,
-          .input-group select,
-          .card button,
-          .copy-btn,
-          #asset-select, #otcMarkets {
-            max-width: 98vw;
-            min-width: 80px;
-            font-size: 0.98rem;
-          }
-          h1, h2 {
-            font-size: 1.2rem;
-          }
-        }px rgba(0, 0, 0, 0.3);
-        border-color: var(--accent);
+        transform: translateY(-2px);
+        border-color: var(--primary-gold);
       }
 
-      .signal-text {
-        margin: 0;
-        font-family: 'Source Code Pro', monospace;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-      }
+      .call { color: var(--success); }
+      .put { color: var(--danger); }
 
-      .call {
-        color: #00e676;
-      }
-
-      .put {
-        color: #ff5252;
-      }
-
-      /* Login Form Styles */
-      .login-container {
-        width: 90%;
+      /* Copy Button */
+      .copy-btn {
+        display: none; /* Hidden until signals are generated */
+        background: var(--primary-gold); /* Changed back to gold */
+        border-color: var(--primary-gold);
+        color: var(--dark-bg);
         max-width: 450px;
-        margin: 80px auto;
-        padding: 40px;
-        background: rgba(26, 0, 51, 0.9);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-          0 0 25px rgba(138, 43, 226, 0.4);
-        border-radius: 15px;
-        text-align: center;
-        border: 1px solid var(--primary);
-        backdrop-filter: blur(8px);
+      }
+      .copy-btn:hover {
+        box-shadow: 0 8px 20px rgba(197, 165, 87, 0.4);
       }
 
-      .login-container input {
-        width: 100%;
-        padding: 14px;
-        margin: 12px 0;
-        border: 1px solid var(--primary);
-        border-radius: 8px;
-        background: rgba(42, 0, 82, 0.5);
-        color: var(--light);
-        font-size: 1rem;
-      }
-
-      .login-container input::placeholder {
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .login-container button {
-        width: 100%;
-        padding: 14px;
-        margin-top: 25px;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
-      }
-
-      .login-container button:hover {
-        background: linear-gradient(135deg, var(--secondary), var(--primary));
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(138, 43, 226, 0.6);
-      }
-
-      /* Loader Styles */
+      /* Loader */
       .loader {
         display: none;
         justify-content: center;
@@ -921,419 +230,249 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(13, 0, 26, 0.95);
+        background: rgba(18, 18, 18, 0.95);
         z-index: 1000;
+        backdrop-filter: blur(5px);
+      }
+
+      .loader-logo {
+        margin-bottom: 20px;
+        animation: pulse-glow 2s infinite ease-in-out;
+      }
+
+      .loader-logo .ascii-art-logo {
+        font-size: 10px;
+        line-height: 0.9;
+      }
+
+      @keyframes pulse-glow {
+        0% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); opacity: 0.8; }
       }
 
       .progress-container {
         width: 80%;
         max-width: 400px;
-        background: rgba(42, 0, 82, 0.5);
+        background: rgba(28, 28, 28, 0.5);
         border-radius: 10px;
-        padding: 3px;
-        margin: 20px 0;
-        border: 1px solid var(--primary);
+        padding: 4px;
+        border: 1px solid var(--primary-gold);
       }
 
       .progress-bar {
-        height: 20px;
+        height: 12px;
         border-radius: 8px;
-        background: linear-gradient(90deg, var(--primary), var(--accent));
+        background: var(--primary-gold);
         width: 0%;
-        transition: width 0.3s ease;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .progress-bar::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(90deg, 
-          transparent, 
-          rgba(255, 255, 255, 0.3), 
-          transparent);
-        animation: shimmer 2s infinite;
-      }
-
-      @keyframes shimmer {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
+        transition: width 0.05s linear; /* Smoother transition */
       }
 
       .progress-text {
-        margin-top: 10px;
+        margin-top: 15px;
         font-size: 1.2rem;
-        color: var(--accent);
-        text-shadow: 0 0 8px rgba(194, 1, 255, 0.7);
+        color: var(--primary-gold);
+        font-family: 'Cinzel', serif;
       }
 
-      .loader-logo {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 20px;
-        background: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        animation: pulse 2s infinite;
-      }
-
-      .loader-logo::after {
-        content: '';
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        border-radius: 50%;
-      }
-
-      @keyframes pulse {
-        0% { transform: scale(1); opacity: 1; }
-        50% { transform: scale(1.1); opacity: 0.8; }
-        100% { transform: scale(1); opacity: 1; }
-      }
-
-      .animation-message {
-        display: none;
+      footer {
+        background: var(--dark-card);
+        color: var(--light-translucent);
         text-align: center;
-        margin-top: 25px;
-        color: var(--accent);
-        font-weight: 600;
-        text-shadow: 0 0 10px rgba(194, 1, 255, 0.7);
-        font-size: 1.1rem;
-      }
-      
-      .group-label {
-        margin-top: 20px;
-        margin-bottom: 12px;
-        font-weight: 600;
-        color: var(--light);
-        text-shadow: 0 0 8px rgba(194, 1, 255, 0.5);
-      }
-      
-      #otcMarkets, #asset-select {
-        width: 100%;
-        height: 150px;
-        margin-top: 12px;
-      }
-      
-      .copy-btn {
-        background: linear-gradient(135deg, var(--success), #00e676);
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 600;
-        margin: 25px auto;
-        transition: all 0.3s ease;
-        display: block;
-        font-size: 1rem;
-        box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4);
-      }
-      
-      .copy-btn:hover {
-        background: linear-gradient(135deg, #00e676, var(--success));
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 200, 83, 0.6);
-      }
-      
-      .api-status {
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        padding: 8px 15px;
-        border-radius: 20px;
+        padding: 20px;
+        margin-top: 50px;
+        border-top: 1px solid rgba(197, 165, 87, 0.4);
         font-size: 0.9rem;
-        font-weight: 600;
-        z-index: 100;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        display: flex;
-        align-items: center;
-      }
-      
-      .api-status::before {
-        content: "";
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        margin-right: 8px;
-      }
-      
-      .api-connected {
-        background: rgba(0, 200, 83, 0.2);
-        border: 1px solid var(--success);
-        color: var(--success);
-      }
-      
-      .api-connected::before {
-        background: var(--success);
-        box-shadow: 0 0 10px var(--success);
-      }
-      
-      .api-disconnected {
-        background: rgba(255, 61, 0, 0.2);
-        border: 1px solid var(--danger);
-        color: var(--danger);
-      }
-      
-      .api-disconnected::before {
-        background: var(--danger);
-        box-shadow: 0 0 10px var(--danger);
-      }
-      
-      .quotex-brand {
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        display: flex;
-        align-items: center;
-        z-index: 100;
-      }
-      
-      .quotex-logo {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        background: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
 
-      .quotex-logo::after {
-        content: '';
-        width: 24px;
-        height: 24px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        border-radius: 50%;
+      footer a {
+        color: var(--primary-gold);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
       }
-      
-      .quotex-text {
+      footer a:hover {
         color: white;
-        font-weight: 600;
-        text-shadow: 0 0 8px var(--accent);
+        text-shadow: 0 0 8px var(--primary-gold);
       }
 
-      .monospace-bold {
-        font-family: 'Source Code Pro', monospace;
-        font-weight: 600;
-      }
-      
-      @media (max-width: 768px) {
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        h1 { font-size: 1.8rem; }
+        h2 { font-size: 1.4rem; }
         .container, .login-container {
-          width: 95%;
-          padding: 20px;
+          padding: 20px 15px;
         }
-        
-        h1 {
-          font-size: 1.8rem;
+        .ascii-art-logo {
+          font-size: 5px;
+          line-height: 0.85;
+          letter-spacing: 0;
         }
-        
-        .card button {
-          width: 80%;
+        .loader-logo .ascii-art-logo {
+          font-size: 6.5px;
         }
-        
-        .api-status {
-          top: 10px;
-          right: 10px;
-          font-size: 0.8rem;
-        }
+      }
 
-        .progress-container {
-          width: 90%;
+      @media (max-width: 400px) {
+        .ascii-art-logo {
+            font-size: 4px;
+            line-height: 0.8;
+        }
+        .loader-logo .ascii-art-logo {
+            font-size: 5px;
         }
       }
     </style>
   </head>
   <body>
-    <!-- Quotex Branding -->
-    <div class="quotex-brand">
-      <div class="quotex-logo"></div>
-      <div class="quotex-text">QUOTEX API</div>
-    </div>
-    
-    <!-- API Connection Status -->
-    <div class="api-status api-connected" id="api-status">QUOTEX API: CONNECTED</div>
-    
-    <!-- Login Page -->
-    <div class="login-container" id="login-page">
-      <h1>QUOTEX PREMIUM SIGNALS</h1>
-      <form id="login-form">
-        <input type="text" id="username" placeholder="Username" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <button type="submit">ACCESS SIGNALS</button>
-      </form>
-    </div>
-
     <!-- Loader -->
     <div class="loader" id="loader">
-      <div class="loader-logo"></div>
+      <div class="loader-logo">
+        <pre class="ascii-art-logo">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣲⣶⠒⠷⠶⠤⠴⠦⠤⠤⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⣶⠚⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠴⠋⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⢤⣀⡀⠀⠀⠀⠀⠤⢌⣛⠶⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢚⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠙⡆⠀⠀⠀⠀⠀⠈⠱⡄⠙⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠖⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⡇⠀⠀⠠⣀⠀⣀⣤⣧⠔⠛⠓⠲⠤⢄⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢐⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣒⣢⣄⣤⣾⣄⣠⣤⣴⣾⣿⣿⣾⡗⠀⢀⣀⢤⠐⠠⠤⣉⠓⠦⣄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠶⠶⢾⣿⡿⠛⢻⣻⠛⢻⣿⣿⠟⣋⣺⣿⠏⠀⠴⠿⠹⠋⠀⠀⠀⠀⠈⠀⠨⠳⣄⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢐⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣤⠤⠄⠐⢾⣿⣝⠤⣀⢀⡠⣱⣿⣿⣿⣿⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⠀
+⠀⠀⠀⠀⠀⠀⢠⡂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢉⣛⣺⣿⣾⣛⣽⣿⡟⠁⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡀
+⠀⠀⠀⠀⠀⠐⡟⠀⠀⠀⠀⡠⠖⠀⠀⠀⢀⡴⠃⠀⠀⠀⠀⠀⠀⡈⠉⢉⡽⠿⢛⡿⢛⠯⠭⣒⣚⣩⣭⣭⣤⡤⠭⠭⢭⣥⣀⣉⣑⣒⢵⡀⠀⠀⢸⡇
+⠀⠀⠀⠀⠀⣰⠃⠀⢀⡔⠋⠀⠀⠀⣠⡴⠋⠀⠀⠀⠀⣠⣤⡴⠋⠀⠀⠀⠀⠀⠾⢶⣾⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠳⡀⠀⣸⠃
+⠀⠀⠀⠀⢰⠟⢀⣴⠏⠀⡀⢀⣴⡿⠋⠀⠀⠀⢀⡴⠟⠋⠁⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣇⠔⠁⠀
+⠀⠀⠀⠀⣞⣴⣿⠃⢠⣾⣴⣿⠋⠀⠀⠀⠀⠐⠋⠀⠀⠀⠀⠀⢐⣚⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠁⠀⠀⠀
+⠀⠀⠀⣸⣿⣿⣧⣶⣿⣿⣿⠗⠁⠀⡠⠂⠀⢀⠀⠀⠀⠀⠂⢉⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⠛⡟⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⠼⢻⣿⣿⣿⣿⣿⣿⠁⢀⣴⠏⢀⣠⠞⠁⢀⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠱⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⣿⣿⣿⣿⣿⣿⣧⣾⡿⣡⣾⣿⠃⣠⡾⠁⠀⣀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠂⠀⢻⣍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⣽⣿⣿⣿⣿⣿⣿⡟⠉⣰⣿⡿⣡⣾⣿⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠉⠢⡀⢻⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣠⣿⣿⣿⣿⣿⣿⣿⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⣱⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⡂⢸⣾⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠐⠛⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢫⣿⠏⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⡄⣇⣿⣿⡏⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣾⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⣴⡿⢋⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠁⠀⡿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⠿⢿⣿⣿⣿⣿⣿⣿⣿⢿⡿⠁⣿⠏⠘⢿⣿⣿⣿⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠿⠋⣿⡿⠋⣸⠟⠁⠀⣾⣿⣿⣿⣿⣿⠟⠁⠈⠀⠀⠹⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠉⠀⠀⠰⠿⣿⣿⠿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⡏⠀⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        </pre>
+      </div>
       <div class="progress-container">
         <div class="progress-bar" id="progress-bar"></div>
       </div>
-      <div class="progress-text" id="progress-text">Connecting to Quotex API... 0%</div>
+      <div class="progress-text" id="progress-text">Connecting...</div>
     </div>
 
-    <!-- Main Page (Hidden Initially) -->
-    <div class="container" id="main-page">
-      <h1>QUOTEX PREMIUM SIGNALS</h1>
-      <div class="card">
-        <h2 class="section-title">Generate Trading Signals</h2>
-        <div class="input-group">
-          <label for="asset-select">Select Assets (Max 10)</label>
-          <select id="asset-select" multiple size="10">
-            <option value="𝙰𝚄𝙳𝙲𝙷𝙵">𝙰𝚄𝙳𝙲𝙷𝙵</option>
-            <option value="𝙰𝚄𝙳𝙹𝙿𝚈">𝙰𝚄𝙳𝙹𝙿𝚈</option>
-            <option value="𝙰𝚄𝙳𝙽𝚉𝙳">𝙰𝚄𝙳𝙽𝚉𝙳</option>
-            <option value="𝙰𝚄𝙳𝚄𝚂𝙳">𝙰𝚄𝙳𝚄𝚂𝙳</option>
-            <option value="𝙱𝙲𝙷𝚄𝚂𝙳">𝙱𝙲𝙷𝚄𝚂𝙳</option>
-            <option value="𝙱𝚃𝙲𝚄𝚂𝙳">𝙱𝚃𝙲𝚄𝚂𝙳</option>
-            <option value="𝙲𝙰𝙳𝙲𝙷𝙵">𝙲𝙰𝙳𝙲𝙷𝙵</option>
-            <option value="𝙲𝙰𝙳𝙹𝙿𝚈">𝙲𝙰𝙳𝙹𝙿𝚈</option>
-            <option value="𝙲𝙷𝙵𝙹𝙿𝚈">𝙲𝙷𝙵𝙹𝙿𝚈</option>
-            <option value="𝙴𝚄𝚁𝙰𝚄𝙳">𝙴𝚄𝚁𝙰𝚄𝙳</option>
-            <option value="𝙴𝚄𝚁𝙲𝙰𝙳">𝙴𝚄𝚁𝙲𝙰𝙳</option>
-            <option value="𝙴𝚄𝚁𝙲𝙷𝙵">𝙴𝚄𝚁𝙲𝙷𝙵</option>
-            <option value="𝙴𝚄𝚁𝙶𝙱𝙿">𝙴𝚄𝚁𝙶𝙱𝙿</option>
-            <option value="𝙴𝚄𝚁𝙹𝙿𝚈">𝙴𝚄𝚁𝙹𝙿𝚈</option>
-            <option value="𝙴𝚄𝚁𝙽𝚉𝙳">𝙴𝚄𝚁𝙽𝚉𝙳</option>
-            <option value="𝙴𝚄𝚁𝚄𝚂𝙳">𝙴𝚄𝚁𝚄𝚂𝙳</option>
-            <option value="𝙴𝚃𝙷𝚄𝚂𝙳">𝙴𝚃𝙷𝚄𝚂𝙳</option>
-            <option value="𝙵𝚁𝙰𝟺𝟶 ">𝙵𝚁𝙰𝟺𝟶 </option>
-            <option value="𝙶𝙱𝙿𝙰𝚄𝙳">𝙶𝙱𝙿𝙰𝚄𝙳</option>
-            <option value="𝙶𝙱𝙿𝙲𝙰𝙳">𝙶𝙱𝙿𝙲𝙰𝙳</option>
-            <option value="𝙶𝙱𝙿𝙲𝙷𝙵">𝙶𝙱𝙿𝙲𝙷𝙵</option>
-            <option value="𝙶𝙱𝙿𝙹𝙿𝚈">𝙶𝙱𝙿𝙹𝙿𝚈</option>
-            <option value="𝙶𝙱𝙿𝙽𝚉𝙳">𝙶𝙱𝙿𝙽𝚉𝙳</option>
-            <option value="𝙶𝙱𝙿𝚄𝚂𝙳">𝙶𝙱𝙿𝚄𝚂𝙳</option>
-            <option value="𝙶𝙴𝚁𝟹𝟶 ">𝙶𝙴𝚁𝟹𝟶 </option>
-            <option value="𝙷𝙺𝟻𝟶  ">𝙷𝙺𝟻𝟶  </option>
-            <option value="𝙹𝙿𝙽𝟸𝟸𝟻">𝙹𝙿𝙽𝟸𝟸𝟻</option>
-            <option value="𝙻𝚃𝙲𝚄𝚂𝙳">𝙻𝚃𝙲𝚄𝚂𝙳</option>
-            <option value="𝙽𝙰𝚂𝟷𝟶𝟶">𝙽𝙰𝚂𝟷𝟶𝟶</option>
-            <option value="𝙽𝚉𝙳𝙲𝙰𝙳">𝙽𝚉𝙳𝙲𝙰𝙳</option>
-            <option value="𝙽𝚉𝙳𝙲𝙷𝙵">𝙽𝚉𝙳𝙲𝙷𝙵</option>
-            <option value="𝙽𝚉𝙳𝙹𝙿𝚈">𝙽𝚉𝙳𝙹𝙿𝚈</option>
-            <option value="𝙽𝚉𝙳𝚄𝚂𝙳">𝙽𝚉𝙳𝚄𝚂𝙳</option>
-            <option value="𝚂𝙿𝚇𝟻𝟶𝟶">𝚂𝙿𝚇𝟻𝟶𝟶</option>
-            <option value="𝚄𝙺𝙾𝙸𝙻 ">𝚄𝙺𝙾𝙸𝙻 </option>
-            <option value="𝚄𝚂𝟹𝟶  ">𝚄𝚂𝟹𝟶  </option>
-            <option value="𝚄𝚂𝙳𝙲𝙰𝙳">𝚄𝚂𝙳𝙲𝙰𝙳</option>
-            <option value="𝚄𝚂𝙳𝙲𝙷𝙵">𝚄𝚂𝙳𝙲𝙷𝙵</option>
-            <option value="𝚄𝚂𝙳𝙹𝙿𝚈">𝚄𝚂𝙳𝙹𝙿𝚈</option>
-            <option value="𝚄𝚂𝙾𝙸𝙻 ">𝚄𝚂𝙾𝙸𝙻 </option>
-            <option value="𝚇𝙰𝙶𝚄𝚂𝙳">𝚇𝙰𝙶𝚄𝚂𝙳</option>
-            <option value="𝚇𝙰𝚄𝚄𝚂𝙳">𝚇𝙰𝚄𝚄𝚂𝙳</option>
-            <option value="𝚇𝚁𝙿𝚄𝚂𝙳">𝚇𝚁𝙿𝚄𝚂𝙳</option>
-          </select>
-        </div>
-       
-        <div class="input-group">
-          <div class="group-label">OTC Markets (Max 10)</div>
-          <select id="otcMarkets" multiple size="10">
-            <option value="𝙰𝚄𝙳𝙲𝙰𝙳 𝙾𝚃𝙲">𝙰𝚄𝙳𝙲𝙰𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙰𝚄𝙳𝙲𝙷𝙵 𝙾𝚃𝙲">𝙰𝚄𝙳𝙲𝙷𝙵 𝙾𝚃𝙲</option>
-            <option value="𝙰𝚄𝙳𝙹𝙿𝚈 𝙾𝚃𝙲">𝙰𝚄𝙳𝙹𝙿𝚈 𝙾𝚃𝙲</option>
-            <option value="𝙰𝚄𝙳𝙽𝚉𝙳 𝙾𝚃𝙲">𝙰𝚄𝙳𝙽𝚉𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙰𝚄𝙳𝚂𝙶𝙳 𝙾𝚃𝙲">𝙰𝚄𝙳𝚂𝙶𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙰𝚄𝙳𝚄𝚂𝙳 𝙾𝚃𝙲">𝙰𝚄𝙳𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙱𝙲𝙷𝚄𝚂𝙳 𝙾𝚃𝙲">𝙱𝙲𝙷𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙱𝚃𝙲𝙶𝙱𝙿 𝙾𝚃𝙲">𝙱𝚃𝙲𝙶𝙱𝙿 𝙾𝚃𝙲</option>
-            <option value="𝙱𝚃𝙲𝙹𝙿𝚈 𝙾𝚃𝙲">𝙱𝚃𝙲𝙹𝙿𝚈 𝙾𝚃𝙲</option>
-            <option value="𝙱𝚃𝙲𝚄𝚂𝙳 𝙾𝚃𝙲">𝙱𝚃𝙲𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙲𝙰𝙳𝙲𝙷𝙵 𝙾𝚃𝙲">𝙲𝙰𝙳𝙲𝙷𝙵 𝙾𝚃𝙲</option>
-            <option value="𝙲𝙰𝙳𝙹𝙿𝚈 𝙾𝚃𝙲">𝙲𝙰𝙳𝙹𝙿𝚈 𝙾𝚃𝙲</option>
-            <option value="𝙲𝙰𝙳𝚂𝙶𝙳 𝙾𝚃𝙲">𝙲𝙰𝙳𝚂𝙶𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙲𝙷𝙵𝙹𝙿𝚈 𝙾𝚃𝙲">𝙲𝙷𝙵𝙹𝙿𝚈 𝙾𝚃𝙲</option>
-            <option value="𝙲𝙷𝙵𝚂𝙶𝙳 𝙾𝚃𝙲">𝙲𝙷𝙵𝚂𝙶𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝙰𝚄𝙳 𝙾𝚃𝙲">𝙴𝚄𝚁𝙰𝚄𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝙲𝙰𝙳 𝙾𝚃𝙲">𝙴𝚄𝚁𝙲𝙰𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝙲𝙷𝙵 𝙾𝚃𝙲">𝙴𝚄𝚁𝙲𝙷𝙵 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝙶𝙱𝙿 𝙾𝚃𝙲">𝙴𝚄𝚁𝙶𝙱𝙿 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝙹𝙿𝚈 𝙾𝚃𝙲">𝙴𝚄𝚁𝙹𝙿𝚈 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝙽𝚉𝙳 𝙾𝚃𝙲">𝙴𝚄𝚁𝙽𝚉𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝙿𝙻𝙽 𝙾𝚃𝙲">𝙴𝚄𝚁𝙿𝙻𝙽 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝚂𝙴𝙺 𝙾𝚃𝙲">𝙴𝚄𝚁𝚂𝙴𝙺 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝚂𝙶𝙳  𝚃𝙲">𝙴𝚄𝚁𝚂𝙶𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝚃𝚁𝚈 𝙾𝚃𝙲">𝙴𝚄𝚁𝚃𝚁𝚈 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝚄𝚂𝙳 𝙾𝚃𝙲">𝙴𝚄𝚁𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚄𝚁𝚉𝙰𝚁 𝙾𝚃𝙲">𝙴𝚄𝚁𝚉𝙰𝚁 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚃𝙷𝙱𝚃𝙲  𝚃𝙲">𝙴𝚃𝙷𝙱𝚃𝙲 𝙾𝚃𝙲</option>
-            <option value="𝙴𝚃𝙷𝚄𝚂𝙳 𝙾𝚃𝙲">𝙴𝚃𝙷𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙵𝚁𝙰𝟺𝟶  𝙾𝚃𝙲">𝙵𝚁𝙰𝟺𝟶  𝙾𝚃𝙲</option>
-            <option value="𝙶𝙱𝙿𝙰𝚄𝙳 𝙾𝚃𝙲">𝙶𝙱𝙿𝙰𝚄𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙶𝙱𝙿𝙲𝙰𝙳 𝙾𝚃𝙲">𝙶𝙱𝙿𝙲𝙰𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙶𝙱𝙿𝙲𝙷𝙵 𝙾𝚃𝙲">𝙶𝙱𝙿𝙲𝙷𝙵 𝙾𝚃𝙲</option>
-            <option value="𝙶𝙱𝙿𝙹𝙿𝚈 𝙾𝚃𝙲">𝙶𝙱𝙿𝙹𝙿𝚈 𝙾𝚃𝙲</option>
-            <option value="𝙶𝙱𝙿𝙽𝚉𝙳 𝙾𝚃𝙲">𝙶𝙱𝙿𝙽𝚉𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙶𝙱𝙿𝚂𝙶𝙳 𝙾𝚃𝙲">𝙶𝙱𝙿𝚂𝙶𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙶𝙱𝙿𝚃𝚁𝚈 𝙾𝚃𝙲">𝙶𝙱𝙿𝚃𝚁𝚈 𝙾𝚃𝙲</option>
-            <option value="𝙶𝙱𝙿𝚄𝚂𝙳 𝙾𝚃𝙲">𝙶𝙱𝙿𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙶𝙴𝚁𝟹𝟶  𝙾𝚃𝙲">𝙶𝙴𝚁𝟹𝟶  𝙾𝚃𝙲</option>
-            <option value="𝙷𝙺𝟻𝟶   𝙾𝚃𝙲">𝙷𝙺𝟻𝟶   𝙾𝚃𝙲</option>
-            <option value="𝙹𝙿𝙽𝟸𝟸𝟻 𝙾𝚃𝙲">𝙹𝙿𝙽𝟸𝟸𝟻 𝙾𝚃𝙲</option>
-            <option value="𝙻𝚃𝙲𝚄𝚂𝙳 𝙾𝚃𝙲">𝙻𝚃𝙲𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙽𝙰𝚂𝟷𝟶𝟶 𝙾𝚃𝙲">𝙽𝙰𝚂𝟷𝟶𝟶 𝙾𝚃𝙲</option>
-            <option value="𝙽𝚉𝙳𝙲𝙰𝙳 𝙾𝚃𝙲">𝙽𝚉𝙳𝙲𝙰𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙽𝚉𝙳𝙲𝙷𝙵 𝙾𝚃𝙲">𝙽𝚉𝙳𝙲𝙷𝙵 𝙾𝚃𝙲</option>
-            <option value="𝙽𝚉𝙳𝙹𝙿𝚈 𝙾𝚃𝙲">𝙽𝚉𝙳𝙹𝙿𝚈 𝙾𝚃𝙲</option>
-            <option value="𝙽𝚉𝙳𝚂𝙶𝙳 𝙾𝚃𝙲">𝙽𝚉𝙳𝚂𝙶𝙳 𝙾𝚃𝙲</option>
-            <option value="𝙽𝚉𝙳𝚄𝚂𝙳 𝙾𝚃𝙲">𝙽𝚉𝙳𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝚂𝙿𝚇𝟻𝟶𝟶 𝙾𝚃𝙲">𝚂𝙿𝚇𝟻𝟶𝟶 𝙾𝚃𝙲</option>
-            <option value="𝚄𝙺𝙾𝙸𝙻  𝙾𝚃𝙲">𝚄𝙺𝙾𝙸𝙻  𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝟹𝟶   𝙾𝚃𝙲">𝚄𝚂𝟹𝟶   𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝙱𝙳𝚃 𝙾𝚃𝙲">𝚄𝚂𝙳𝙱𝙳𝚃 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝙲𝙰𝙳 𝙾𝚃𝙲">𝚄𝚂𝙳𝙲𝙰𝙳 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝙲𝙷𝙵 𝙾𝚃𝙲">𝚄𝚂𝙳𝙲𝙷𝙵 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝙷𝙺𝙳 𝙾𝚃𝙲">𝚄𝚂𝙳𝙷𝙺𝙳 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝙹𝙿𝚈 𝙾𝚃𝙲">𝚄𝚂𝙳𝙹𝙿𝚈 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝙽𝙾𝙺 𝙾𝚃𝙲">𝚄𝚂𝙳𝙽𝙾𝙺 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝙿𝙻𝙽 𝙾𝚃𝙲">𝚄𝚂𝙳𝙿𝙻𝙽 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝚂𝙶𝙳 𝙾𝚃𝙲">𝚄𝚂𝙳𝚂𝙶𝙳 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝚂𝙴𝙺 𝙾𝚃𝙲">𝚄𝚂𝙳𝚂𝙴𝙺 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝚃𝚁𝚈 𝙾𝚃𝙲">𝚄𝚂𝙳𝚃𝚁𝚈 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙳𝚉𝙰𝚁 𝙾𝚃𝙲">𝚄𝚂𝙳𝚉𝙰𝚁 𝙾𝚃𝙲</option>
-            <option value="𝚄𝚂𝙾𝙸𝙻  𝙾𝚃𝙲">𝚄𝚂𝙾𝙸𝙻  𝙾𝚃𝙲</option>
-            <option value="𝚇𝙰𝙶𝚄𝚂𝙳 𝙾𝚃𝙲">𝚇𝙰𝙶𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝚇𝙰𝚄𝚄𝚂𝙳 𝙾𝚃𝙲">𝚇𝙰𝚄𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-            <option value="𝚇𝚁𝙿𝚄𝚂𝙳 𝙾𝚃𝙲">𝚇𝚁𝙿𝚄𝚂𝙳 𝙾𝚃𝙲</option>
-          </select>        </div>
-        
-        <div class="input-group">
-          <label for="signal-count">Number of Signals</label>
-          <input type="number" id="signal-count" value="1" min="10" max="500" />
-        </div>
-        <div class="input-group">
-          <label for="filter-select">Signal Type</label>
-          <select id="filter-select">
-            <option value="ALL">All Signals</option>
-            <option value="CALL">CALL Only</option>
-            <option value="PUT">PUT Only</option>
-          </select>
-        </div>
-        <div class="input-group">
-          <label>
-            <input type="checkbox" id="backtest-filter" checked /> Premium Signals Only (99% Accuracy)
-          </label>
-        </div>
-        <button id="generate-signals">GENERATE SIGNALS</button>
+    <div class="main-content">
+      <!-- Login Page -->
+      <div class="login-container" id="login-page">
+        <pre class="ascii-art-logo">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣲⣶⠒⠷⠶⠤⠴⠦⠤⠤⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⣶⠚⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠴⠋⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⢤⣀⡀⠀⠀⠀⠀⠤⢌⣛⠶⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢚⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠙⡆⠀⠀⠀⠀⠀⠈⠱⡄⠙⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠖⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⡇⠀⠀⠠⣀⠀⣀⣤⣧⠔⠛⠓⠲⠤⢄⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢐⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣒⣢⣄⣤⣾⣄⣠⣤⣴⣾⣿⣿⣾⡗⠀⢀⣀⢤⠐⠠⠤⣉⠓⠦⣄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠶⠶⢾⣿⡿⠛⢻⣻⠛⢻⣿⣿⠟⣋⣺⣿⠏⠀⠴⠿⠹⠋⠀⠀⠀⠀⠈⠀⠨⠳⣄⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢐⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣤⠤⠄⠐⢾⣿⣝⠤⣀⢀⡠⣱⣿⣿⣿⣿⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⠀
+⠀⠀⠀⠀⠀⠀⢠⡂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢉⣛⣺⣿⣾⣛⣽⣿⡟⠁⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡀
+⠀⠀⠀⠀⠀⠐⡟⠀⠀⠀⠀⡠⠖⠀⠀⠀⢀⡴⠃⠀⠀⠀⠀⠀⠀⡈⠉⢉⡽⠿⢛⡿⢛⠯⠭⣒⣚⣩⣭⣭⣤⡤⠭⠭⢭⣥⣀⣉⣑⣒⢵⡀⠀⠀⢸⡇
+⠀⠀⠀⠀⠀⣰⠃⠀⢀⡔⠋⠀⠀⠀⣠⡴⠋⠀⠀⠀⠀⣠⣤⡴⠋⠀⠀⠀⠀⠀⠾⢶⣾⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠳⡀⠀⣸⠃
+⠀⠀⠀⠀⢰⠟⢀⣴⠏⠀⡀⢀⣴⡿⠋⠀⠀⠀⢀⡴⠟⠋⠁⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣇⠔⠁⠀
+⠀⠀⠀⠀⣞⣴⣿⠃⢠⣾⣴⣿⠋⠀⠀⠀⠀⠐⠋⠀⠀⠀⠀⠀⢐⣚⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠁⠀⠀⠀
+⠀⠀⠀⣸⣿⣿⣧⣶⣿⣿⣿⠗⠁⠀⡠⠂⠀⢀⠀⠀⠀⠀⠂⢉⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⠛⡟⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⠼⢻⣿⣿⣿⣿⣿⣿⠁⢀⣴⠏⢀⣠⠞⠁⢀⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠱⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⣿⣿⣿⣿⣿⣿⣧⣾⡿⣡⣾⣿⠃⣠⡾⠁⠀⣀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠂⠀⢻⣍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⣽⣿⣿⣿⣿⣿⣿⡟⠉⣰⣿⡿⣡⣾⣿⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠉⠢⡀⢻⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣠⣿⣿⣿⣿⣿⣿⣿⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⣱⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⡂⢸⣾⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠐⠛⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢫⣿⠏⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⡄⣇⣿⣿⡏⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣾⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⣴⡿⢋⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠁⠀⡿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⠿⢿⣿⣿⣿⣿⣿⣿⣿⢿⡿⠁⣿⠏⠘⢿⣿⣿⣿⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠿⠋⣿⡿⠋⣸⠟⠁⠀⣾⣿⣿⣿⣿⣿⠟⠁⠈⠀⠀⠹⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠉⠀⠀⠰⠿⣿⣿⠿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⡏⠀⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        </pre>
+        <h1>EAGLE HYPER AI</h1>
+        <h2 class="login-subtitle">Premium Market Signals</h2>
+        <form id="login-form">
+            <input type="password" id="license-key" placeholder="Enter Your License Key" required class="input-group" />
+            <button type="submit" class="form-button">FREE & VIP ACCESS</button>
+        </form>
       </div>
 
-      <div class="signal-output" id="signal-list"></div>
-      <button class="copy-btn" id="copy-all-btn" style="display: none;">COPY ALL SIGNALS</button>
-      <div class="animation-message">Signals generated successfully!</div>
+      <!-- Main Page (Hidden Initially) -->
+      <div class="container" id="main-page">
+        <pre class="ascii-art-logo">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣲⣶⠒⠷⠶⠤⠴⠦⠤⠤⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⣶⠚⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠴⠋⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⢤⣀⡀⠀⠀⠀⠀⠤⢌⣛⠶⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢚⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠙⡆⠀⠀⠀⠀⠀⠈⠱⡄⠙⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠖⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⡇⠀⠀⠠⣀⠀⣀⣤⣧⠔⠛⠓⠲⠤⢄⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢐⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣒⣢⣄⣤⣾⣄⣠⣤⣴⣾⣿⣿⣾⡗⠀⢀⣀⢤⠐⠠⠤⣉⠓⠦⣄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠶⠶⢾⣿⡿⠛⢻⣻⠛⢻⣿⣿⠟⣋⣺⣿⠏⠀⠴⠿⠹⠋⠀⠀⠀⠀⠈⠀⠨⠳⣄⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢐⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣤⠤⠄⠐⢾⣿⣝⠤⣀⢀⡠⣱⣿⣿⣿⣿⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⠀
+⠀⠀⠀⠀⠀⠀⢠⡂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢉⣛⣺⣿⣾⣛⣽⣿⡟⠁⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡀
+⠀⠀⠀⠀⠀⠐⡟⠀⠀⠀⠀⡠⠖⠀⠀⠀⢀⡴⠃⠀⠀⠀⠀⠀⠀⡈⠉⢉⡽⠿⢛⡿⢛⠯⠭⣒⣚⣩⣭⣭⣤⡤⠭⠭⢭⣥⣀⣉⣑⣒⢵⡀⠀⠀⢸⡇
+⠀⠀⠀⠀⠀⣰⠃⠀⢀⡔⠋⠀⠀⠀⣠⡴⠋⠀⠀⠀⠀⣠⣤⡴⠋⠀⠀⠀⠀⠀⠾⢶⣾⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠳⡀⠀⣸⠃
+⠀⠀⠀⠀⢰⠟⢀⣴⠏⠀⡀⢀⣴⡿⠋⠀⠀⠀⢀⡴⠟⠋⠁⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣇⠔⠁⠀
+⠀⠀⠀⠀⣞⣴⣿⠃⢠⣾⣴⣿⠋⠀⠀⠀⠀⠐⠋⠀⠀⠀⠀⠀⢐⣚⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠁⠀⠀⠀
+⠀⠀⠀⣸⣿⣿⣧⣶⣿⣿⣿⠗⠁⠀⡠⠂⠀⢀⠀⠀⠀⠀⠂⢉⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⠛⡟⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⠼⢻⣿⣿⣿⣿⣿⣿⠁⢀⣴⠏⢀⣠⠞⠁⢀⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠱⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⣿⣿⣿⣿⣿⣿⣧⣾⡿⣡⣾⣿⠃⣠⡾⠁⠀⣀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠂⠀⢻⣍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⣽⣿⣿⣿⣿⣿⣿⡟⠉⣰⣿⡿⣡⣾⣿⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠉⠢⡀⢻⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣠⣿⣿⣿⣿⣿⣿⣿⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⣱⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⡂⢸⣾⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠐⠛⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢫⣿⠏⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⡄⣇⣿⣿⡏⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣾⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⣴⡿⢋⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠁⠀⡿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⠿⢿⣿⣿⣿⣿⣿⣿⣿⢿⡿⠁⣿⠏⠘⢿⣿⣿⣿⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠿⠋⣿⡿⠋⣸⠟⠁⠀⣾⣿⣿⣿⣿⣿⠟⠁⠈⠀⠀⠹⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠉⠀⠀⠰⠿⣿⣿⠿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⡏⠀⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        </pre>
+        <h1>EAGLE HYPER AI</h1>
+        <div class="card">
+          <h2>𝚂𝙸𝙻𝙴𝙽𝚃 𝙰𝙻𝙿𝙷𝙰 𝙴𝙰𝙶𝙻𝙴 </h2>
+          <div class="input-group">
+            <label for="asset-select" class="group-label">Select Real Assets (Max 3)</label>
+            <select id="asset-select" multiple>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+          </div>
+         
+          <div class="input-group">
+            <label class="group-label" for="otcMarkets">Select OTC Markets (Max 3)</label>
+            <select id="otcMarkets" multiple>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <input type="number" id="signal-count" value="10" min="1" max="500" placeholder="Number of Signals (1-500)"/>
+          </div>
+          <div class="input-group">
+            <select id="filter-select">
+              <option value="ALL">All Signals (CALL & PUT)</option>
+              <option value="CALL">CALL Only</option>
+              <option value="PUT">PUT Only</option>
+            </select>
+          </div>
+          <button id="generate-signals" class="form-button">GENERATE SIGNALS</button>
+        </div>
+
+        <div class="signal-output" id="signal-list"></div>
+        <button class="form-button copy-btn" id="copy-all-btn">COPY ALL SIGNALS</button>
+      </div>
     </div>
 
     <footer>
-      <p class="footer-text">
-        &copy; 2025 TRIO PROFIT CITY | 
+      <p>
+        &copy; 2025 EAGLE HYPER AI |
         <a href="https://t.me/trioprofitcity" target="_blank">
           JOIN OUR TELEGRAM CHANNEL
         </a>
@@ -1341,34 +480,112 @@
     </footer>
 
     <script>
+      // --- ASSET LISTS ---
+      const FREE_REAL = [
+        "𝙰𝚄𝙳𝙹𝙿𝚈", "𝙰𝚄𝙳𝙽𝚉𝙳", "𝙰𝚄𝙳𝚄𝚂𝙳", "𝙲𝙰𝙳𝙲𝙷𝙵", "𝙲𝙰𝙳𝙹𝙿𝚈", "𝙲𝙷𝙵𝙹𝙿𝚈",
+        "𝙴𝚄𝚁𝙰𝚄𝙳", "𝙴𝚄𝚁𝙲𝙰𝙳", "𝙴𝚄𝚁𝙲𝙷𝙵", "𝙴𝚄𝚁𝙶𝙱𝙿", "𝙶𝙱𝙿𝙲𝙰𝙳", "𝚄𝚂𝙳𝙲𝙰𝙳"
+      ];
+      
+      const FREE_OTC = [
+        "𝚄𝚂𝙳𝙱𝚁𝙻 𝙾𝚃𝙲", "𝙽𝚉𝙳𝙲𝙰𝙳 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙴𝙶𝙿 𝙾𝚃𝙲", "𝙲𝙰𝙳𝙲𝙷𝙵 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙱𝙳𝚃 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙸𝙽𝚁 𝙾𝚃𝙲",
+        "𝚄𝚂𝙳𝙿𝙺𝚁 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙼𝚇𝙽 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙲𝙾𝙿 𝙾𝚃𝙲", "𝚄𝚂𝙳𝚃𝚁𝚈 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙳𝚉𝙳 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙰𝚁𝚂 𝙾𝚃𝙲", "𝚄𝚂𝙳𝚉𝙰𝚁 𝙾𝚃𝙲",
+        "𝙴𝚃𝙷𝙴𝚁𝙴𝚄𝙼 𝙾𝚃𝙲", "𝙻𝙸𝚃𝙴𝙲𝙾𝙸𝙽 𝙾𝚃𝙲", "𝚃𝙾𝙽𝙲𝚉𝙾𝙸𝙽 𝙾𝚃𝙲",
+        "𝚄𝙺𝙱𝚁𝙴𝙽𝚃 𝙾𝚃𝙲", "𝚄𝚂𝙲𝚁𝚄𝙳𝙴 𝙾𝚃𝙲", "𝚂𝙸𝙻𝚅𝙴𝚁 𝙾𝚃𝙲", "𝙶𝙾𝙻𝙳 𝙾𝚃𝙲",
+        "𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝙾𝚃𝙲", "𝙼𝙲𝙳𝙾𝙽𝙰𝙻𝙳 𝙾𝚃𝙲", "𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 𝙾𝚃𝙲", "𝙹𝙾𝙷𝙽𝚂𝙾𝙽 𝙾𝚃𝙲", "𝙸𝙽𝚃𝙴𝙻 𝙾𝚃𝙲"
+      ];
+
+      const VIP_REAL = [
+        "𝙰𝚄𝙳𝙹𝙿𝚈", "𝙰𝚄𝙳𝙽𝚉𝙳", "𝙰𝚄𝙳𝚄𝚂𝙳", "𝙱𝚃𝙲𝚄𝚂𝙳", "𝙲𝙰𝙳𝙲𝙷𝙵", "𝙲𝙰𝙳𝙹𝙿𝚈", "𝙲𝙷𝙵𝙹𝙿𝚈", "𝙴𝚄𝚁𝙰𝚄𝙳", "𝙴𝚄𝚁𝙲𝙰𝙳",
+        "𝙴𝚄𝚁𝙲𝙷𝙵", "𝙴𝚄𝚁𝙶𝙱𝙿", "𝙴𝚄𝚁𝙹𝙿𝚈", "𝙴𝚄𝚁𝙽𝚉𝙳", "𝙴𝚄𝚁𝚄𝚂𝙳", "𝙶𝙱𝙿𝙰𝚄𝙳", "𝙶𝙱𝙿𝙲𝙰𝙳", "𝙶𝙱𝙿𝙲𝙷𝙵", "𝙶𝙱𝙿𝙹𝙿𝚈",
+        "𝙶𝙱𝙿𝚄𝚂𝙳", "𝙽𝚉𝙳𝙲𝙰𝙳", "𝙽𝚉𝙳𝙲𝙷𝙵", "𝙽𝚉𝙳𝙹𝙿𝚈", "𝚄𝚂𝙳𝙲𝙰𝙳"
+      ];
+
+      const VIP_OTC = [
+        "𝚄𝚂𝙳𝙱𝚁𝙻 𝙾𝚃𝙲", "𝙽𝚉𝙳𝙲𝙰𝙳 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙴𝙶𝙿 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙸𝙳𝚁 𝙾𝚃𝙲", "𝙶𝙱𝙿𝙽𝚉𝙳 𝙾𝚃𝙲", "𝙲𝙰𝙳𝙲𝙷𝙵 𝙾𝚃𝙲",
+        "𝚄𝚂𝙳𝙱𝙳𝚃 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙿𝙷𝙿 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙽𝙶𝙽 𝙾𝚃𝙲", "𝙰𝚄𝙳𝙽𝚉𝙳 𝙾𝚃𝙲", "𝙴𝚄𝚁𝚂𝙶𝙳 𝙾𝚃𝙲", "𝙽𝚉𝙳𝙹𝙿𝚈 𝙾𝚃𝙲",
+        "𝚄𝚂𝙳𝙸𝙽𝚁 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙿𝙺𝚁 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙼𝚇𝙽 𝙾𝚃𝙲", "𝙽𝚉𝙳𝙲𝙷𝙵 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙲𝙾𝙿 𝙾𝚃𝙲", "𝚄𝚂𝙳𝚃𝚁𝚈 𝙾𝚃𝙲",
+        "𝙽𝚉𝙳𝚄𝚂𝙳 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙳𝚉𝙳 𝙾𝚃𝙲", "𝚄𝚂𝙳𝙰𝚁𝚂 𝙾𝚃𝙲", "𝙴𝚄𝚁𝙽𝚉𝙳 𝙾𝚃𝙲", "𝚄𝚂𝙳𝚉𝙰𝚁 𝙾𝚃𝙲",
+        "𝙱𝙸𝚃𝙲𝙾𝙸𝙽 𝙲𝙰𝚂𝙷 𝙾𝚃𝙲", "𝙳𝙾𝙶𝚆𝙸𝙵𝙷𝙰𝚃 𝙾𝚃𝙲", "𝙴𝚃𝙷𝙴𝚁𝙴𝚄𝙼 𝙾𝚃𝙲", "𝙻𝙸𝚃𝙴𝙲𝙾𝙸𝙽 𝙾𝚃𝙲", "𝚃𝙾𝙽𝙲𝚉𝙾𝙸𝙽 𝙾𝚃𝙲",
+        "𝙱𝙸𝚃𝙲𝙾𝙸𝙽 𝙾𝚃𝙲", "𝚁𝙸𝙿𝙿𝙻𝙴 𝙾𝚃𝙲", "𝙵𝙻𝙾𝙺𝙸 𝙾𝚃𝙲", "𝙱𝙾𝙽𝙺 𝙾𝚃𝙲", "𝚃𝚁𝙾𝙽 𝙾𝚃𝙲",
+        "𝚄𝙺𝙱𝚁𝙴𝙽𝚃 𝙾𝚃𝙲", "𝚄𝚂𝙲𝚁𝚄𝙳𝙴 𝙾𝚃𝙲", "𝚂𝙸𝙻𝚅𝙴𝚁 𝙾𝚃𝙲", "𝙶𝙾𝙻𝙳 𝙾𝚃𝙲",
+        "𝙰𝙼𝙴𝚁𝙸𝙲𝙰𝙽 𝙴𝚇𝙿𝚁𝙴𝚂𝚂 𝙾𝚃𝙲", "𝙱𝙾𝙴𝙸𝙽𝙶 𝙲𝙾𝙼𝙿𝙰𝙽𝚈 𝙾𝚃𝙲", "𝙿𝙵𝙸𝚉𝙴𝚁 𝙸𝙽𝙲 𝙾𝚃𝙲", "𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝙾𝚃𝙲",
+        "𝙼𝙲𝙳𝙾𝙽𝙰𝙻𝙳 𝙾𝚃𝙲", "𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 𝙾𝚃𝙲", "𝙳𝙾𝚆𝙹𝙾𝙽𝙴𝚂 𝙾𝚃𝙲", "𝙹𝙾𝙷𝙽𝚂𝙾𝙽 𝙾𝚃𝙲", "𝙸𝙽𝚃𝙴𝙻 𝙾𝚃𝙲"
+      ];
+      
+      // --- HELPER FUNCTIONS ---
+
+      // Populates a <select> element with options from an array
+      function createOptions(selectElement, assetArray) {
+        selectElement.innerHTML = ''; // Clear existing options
+        assetArray.forEach(asset => {
+            const option = document.createElement('option');
+            option.value = asset;
+            option.textContent = asset;
+            selectElement.appendChild(option);
+        });
+      }
+
+      // Populates all asset lists based on the user's access level
+      function populateAssetLists(accessLevel) {
+        const realAssetSelect = document.getElementById('asset-select');
+        const otcMarketSelect = document.getElementById('otcMarkets');
+
+        if (accessLevel === 'VIP') {
+            createOptions(realAssetSelect, VIP_REAL);
+            createOptions(otcMarketSelect, VIP_OTC);
+        } else { // FREE access
+            createOptions(realAssetSelect, FREE_REAL);
+            createOptions(otcMarketSelect, FREE_OTC);
+        }
+      }
+
+      // --- EVENT LISTENERS ---
+
       // Login Functionality
       document.getElementById("login-form").addEventListener("submit", function (event) {
         event.preventDefault();
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
+        const licenseKey = document.getElementById("license-key").value.trim();
+        let accessLevel = null;
 
-        if (username === "TPC" && password === "TPC") {
+        if (licenseKey === "EAGLE_AI_PRO") {
+            accessLevel = 'VIP';
+        } else if (licenseKey === "EAGLE_AI") {
+            accessLevel = 'FREE';
+        }
+
+        if (accessLevel) {
+          // Populate the asset lists based on access level BEFORE showing the page
+          populateAssetLists(accessLevel);
+          
           document.getElementById("loader").style.display = "flex";
+          document.getElementById("progress-bar").style.width = "0%";
+          document.getElementById("progress-text").textContent = "AUTHENTICATING...";
           let progress = 0;
           const progressBar = document.getElementById("progress-bar");
           const progressText = document.getElementById("progress-text");
           
+          // --- MODIFIED: Login loader to take 10 seconds ---
+          const totalLoginDuration = 10000; // 10 seconds in milliseconds
+          const updateInterval = 50; // Update every 50ms
+          const progressIncrement = 100 / (totalLoginDuration / updateInterval);
+          
           const interval = setInterval(() => {
-            progress += 1;
+            progress += progressIncrement;
+            if (progress > 100) progress = 100;
+            
             progressBar.style.width = progress + "%";
-            progressText.textContent = "Connecting to Quotex API... " + progress + "%";
+            progressText.textContent = "AUTHENTICATING... " + Math.floor(progress) + "%";
             
             if (progress >= 100) {
               clearInterval(interval);
               document.getElementById("loader").style.display = "none";
               document.getElementById("login-page").style.display = "none";
               document.getElementById("main-page").style.display = "block";
-              document.getElementById("api-status").textContent = "QUOTEX API: CONNECTED";
-              document.getElementById("api-status").className = "api-status api-connected";
             }
-          }, 100);
+          }, updateInterval);
+
         } else {
-          alert("Invalid username or password");
+          alert("Invalid License Key. Please try again.");
         }
       });
 
@@ -1378,19 +595,10 @@
         const assetSelect = document.getElementById("asset-select");
         const otcMarkets = document.getElementById("otcMarkets");
         
-        let selectedAssets = [];
-        
-        for (let i = 0; i < assetSelect.options.length; i++) {
-          if (assetSelect.options[i].selected) {
-            selectedAssets.push(assetSelect.options[i].value);
-          }
-        }
-        
-        for (let i = 0; i < otcMarkets.options.length; i++) {
-          if (otcMarkets.options[i].selected) {
-            selectedAssets.push(otcMarkets.options[i].value);
-          }
-        }
+        let selectedAssets = [
+          ...Array.from(assetSelect.selectedOptions).map(opt => opt.value),
+          ...Array.from(otcMarkets.selectedOptions).map(opt => opt.value)
+        ];
         
         if (selectedAssets.length === 0) {
           alert("Please select at least one asset or OTC market");
@@ -1403,168 +611,135 @@
         }
 
         document.getElementById("loader").style.display = "flex";
-        document.getElementById("progress-text").textContent = "Generating Premium Signals... 0%";
+        document.getElementById("progress-text").textContent = "ANALYZING MARKETS... 0%";
         document.getElementById("progress-bar").style.width = "0%";
-        document.querySelector(".animation-message").style.display = "none";
         document.getElementById("signal-list").innerHTML = "";
         document.getElementById("copy-all-btn").style.display = "none";
 
         let progress = 0;
+        
+        // --- MODIFIED: Signal Generation loader to take 14 seconds ---
+        const totalSignalGenDuration = 14000; // 14 seconds in milliseconds
+        const updateInterval = 50; // Update every 50ms
+        const progressIncrement = 100 / (totalSignalGenDuration / updateInterval);
+
         const progressInterval = setInterval(() => {
-          progress += 2;
+          progress += progressIncrement;
+          if (progress > 100) progress = 100;
+
           document.getElementById("progress-bar").style.width = progress + "%";
           document.getElementById("progress-text").textContent = 
-            "Generating Premium Signals... " + progress + "%";
+            "ANALYZING MARKETS... " + Math.floor(progress) + "%";
             
           if (progress >= 100) {
             clearInterval(progressInterval);
             generateSignals(selectedAssets);
             document.getElementById("loader").style.display = "none";
-            document.querySelector(".animation-message").style.display = "block";
-            document.getElementById("copy-all-btn").style.display = "block";
+            if (document.getElementById("signal-list").hasChildNodes()) {
+                document.getElementById("copy-all-btn").style.display = "block";
+            }
           }
-        }, 100);
+        }, updateInterval);
       });
 
       function generateSignals(assets) {
-  const signalCount = parseInt(document.getElementById("signal-count").value);
-  const filter = document.getElementById("filter-select").value;
-  const backtestFilter = document.getElementById("backtest-filter").checked;
+        const signalCount = parseInt(document.getElementById("signal-count").value);
+        const filter = document.getElementById("filter-select").value;
+        let signals = [];
+        let time = new Date();
 
-  let signals = [];
-  let time = new Date();
+        for (let i = 0; i < signalCount; i++) {
+          const randomAsset = assets[Math.floor(Math.random() * assets.length)];
+          let direction = Math.random() > 0.5 ? "CALL" : "PUT";
+          if (filter !== "ALL") {
+            direction = filter;
+          }
 
-  for (let i = 0; i < signalCount; i++) {
-    const randomAsset = assets[Math.floor(Math.random() * assets.length)];
+          let randomInterval = Math.floor(Math.random() * 7) + 2; // 2 to 8 minutes
+          time = new Date(time.getTime() + randomInterval * 60000);
 
-    let direction = Math.random() > 0.7 ? "CALL" : "PUT";
-    if (filter !== "ALL" && filter !== direction) {
-      direction = filter;
-    }
+          const formattedTime = time.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+          });
 
-    if (backtestFilter && Math.random() > 0.97) {
-      continue;
-    }
-
-    // Generate a random interval between 2 and 8 minutes for each signal
-    let randomInterval = Math.floor(Math.random() * 7) + 2; // 2 to 8 minutes
-    time = new Date(time.getTime() + randomInterval * 60000);
-
-    const formattedTime = time.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false,
-    });
-
-    signals.push({
-      time: formattedTime,
-      asset: randomAsset,
-      direction,
-    });
-  }
-
-  displaySignals(signals);
-
+          signals.push({
+            time: formattedTime,
+            asset: randomAsset,
+            direction,
+          });
+        }
+        displaySignals(signals);
       }
 
       function displaySignals(signals) {
         const signalList = document.getElementById("signal-list");
         signalList.innerHTML = "";
-
         if (signals.length === 0) {
-          signalList.innerHTML = "<div>No signals generated with current filters</div>";
+          signalList.innerHTML = "<div style='text-align:center; padding: 20px;'>No signals generated.</div>";
           return;
         }
-
         signals.forEach((signal) => {
           const signalBox = document.createElement("div");
           signalBox.className = "signal-box";
-          
-          const directionClass = signal.direction === "CALL" ? "call" : "put";
+          const directionClass = signal.direction.toLowerCase();
           const directionSymbol = signal.direction === "CALL" ? "𝙱𝚄𝚈" : "𝙿𝚄𝚃";
-          
-          signalBox.innerHTML = `
-            <p class="signal-text ${directionClass}">❏ 1𝙼 ${signal.time} - ${signal.asset} - ${directionSymbol}</p>
-          `;
+          signalBox.innerHTML = `<p class="${directionClass}">❏ 1M ${signal.time} - ${signal.asset} - ${directionSymbol}</p>`;
           signalList.appendChild(signalBox);
         });
       }
       
+      // Copy to Clipboard Functionality
       document.getElementById("copy-all-btn").addEventListener("click", function() {
-        const signalBoxes = document.querySelectorAll(".signal-text");
-        let signalsText = "";
-        
-        signalBoxes.forEach(box => {
-          signalsText += box.textContent + "\n";
-        });
-        
-        if (signalsText.trim() === "") {
+        const copyBtn = this;
+        const originalText = "COPY ALL SIGNALS";
+        const originalBg = "var(--primary-gold)";
+        const originalColor = "var(--dark-bg)";
+
+        const signalsText = Array.from(document.querySelectorAll(".signal-box p"))
+                                 .map(p => p.textContent.trim())
+                                 .join("\n");
+
+        if (!signalsText) {
           alert("No signals to copy!");
           return;
         }
-        
-        const textarea = document.createElement("textarea");
-        textarea.value = signalsText;
-        textarea.style.position = "fixed";
-        document.body.appendChild(textarea);
-        textarea.select();
-        
-        try {
-          const successful = document.execCommand("copy");
-          if (successful) {
-            const btn = document.getElementById("copy-all-btn");
-            btn.textContent = "COPIED!";
-            btn.style.background = "linear-gradient(135deg, #00e676, #00c853)";
+
+        navigator.clipboard.writeText(signalsText).then(() => {
+            copyBtn.textContent = "COPIED!";
+            copyBtn.style.background = `var(--success)`;
+            copyBtn.style.color = `#fff`; // White text for success
             setTimeout(() => {
-              btn.textContent = "COPY ALL SIGNALS";
-              btn.style.background = "linear-gradient(135deg, #00c853, #00e676)";
+              copyBtn.textContent = originalText;
+              copyBtn.style.background = originalBg;
+              copyBtn.style.color = originalColor;
             }, 2000);
-          } else {
-            throw new Error("Copy command failed");
-          }
-        } catch (err) {
-          alert("Failed to copy signals. Please try again or manually select and copy.");
-        } finally {
-          document.body.removeChild(textarea);
-        }
+        }).catch(err => {
+            alert("Failed to copy signals. Please try again.");
+            console.error("Clipboard Error: ", err);
+        });
       });
       
-      function limitSelections(selectElement, maxSelections) {
+      function limitSelections(selectElement, maxSelections, event) {
         if (selectElement.selectedOptions.length > maxSelections) {
-          const options = Array.from(selectElement.options);
-          const lastSelectedIndex = options.findIndex(opt => opt.selected && 
-            !Array.from(selectElement.selectedOptions).includes(opt));
-          
-          if (lastSelectedIndex !== -1) {
-            selectElement.options[lastSelectedIndex].selected = false;
+          alert(`You can select a maximum of ${maxSelections} items from this list.`);
+          // Deselect the item that was just clicked to cause the overflow
+          const lastSelectedOption = event.target;
+          if(lastSelectedOption.tagName === 'OPTION'){
+             lastSelectedOption.selected = false;
           }
-          
-          alert(`You can select maximum ${maxSelections} items`);
         }
       }
       
-      document.getElementById("asset-select").addEventListener("change", function() {
-        limitSelections(this, 3);
+      document.getElementById("asset-select").addEventListener("change", function(event) {
+        limitSelections(this, 3, event);
       });
       
-      document.getElementById("otcMarkets").addEventListener("change", function() {
-        limitSelections(this, 3);
+      document.getElementById("otcMarkets").addEventListener("change", function(event) {
+        limitSelections(this, 3, event);
       });
-      
-      setInterval(() => {
-        if (Math.random() > 0.95) {
-          const apiStatus = document.getElementById("api-status");
-          if (apiStatus.classList.contains("api-connected")) {
-            apiStatus.textContent = "QUOTEX API: RECONNECTING...";
-            apiStatus.className = "api-status api-disconnected";
-            
-            setTimeout(() => {
-              apiStatus.textContent = "QUOTEX API: CONNECTED";
-              apiStatus.className = "api-status api-connected";
-            }, 3000);
-          }
-        }
-      }, 30000);
+
     </script>
   </body>
 </html>
